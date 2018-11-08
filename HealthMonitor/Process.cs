@@ -22,7 +22,7 @@ namespace HealthMonitor
 
 		private String thingName = ConfigurationManager.AppSettings["thingName"];
 		private String awsAccessKeyId = ConfigurationManager.AppSettings["awsAccessKeyId"];
-		private String awsSecretAccessKey = ConfigurationManager.AppSettings["awsAccessKeyId"];
+		private String awsSecretAccessKey = ConfigurationManager.AppSettings["awsSecretAccessKey"];
 		private AmazonIotDataClient Client = null;
 
 		private List<Monitoring> Monitorings = null;
