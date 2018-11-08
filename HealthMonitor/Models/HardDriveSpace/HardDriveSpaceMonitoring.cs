@@ -56,7 +56,7 @@ namespace HealthMonitor.Models.HardDriveSpace
 
 			previousResults = spaceInfos;
 
-
+			Task.Delay(1000 * 120, cancellationToken.Token).ContinueWith((t) => Run(), cancellationToken.Token);
 		}
 
 

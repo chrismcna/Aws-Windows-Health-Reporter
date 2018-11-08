@@ -28,7 +28,7 @@ namespace HealthMonitor.Models.HardDriveSmart
 		public override void Start()
 		{
 			cancellationToken = new CancellationTokenSource();
-			Task.Delay(2000, cancellationToken.Token).ContinueWith((t) => Run(), cancellationToken.Token);
+			Task.Delay(1000 * 2, cancellationToken.Token).ContinueWith((t) => Run(), cancellationToken.Token);
 		}
 
 		public override void Stop()
@@ -48,6 +48,8 @@ namespace HealthMonitor.Models.HardDriveSmart
 			}
 
 			previousSmartInfos = smartInfos;
+
+			Task.Delay(1000 * 120, cancellationToken.Token).ContinueWith((t) => Run(), cancellationToken.Token);
 		}
 
 
