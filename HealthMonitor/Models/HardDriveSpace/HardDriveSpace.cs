@@ -22,7 +22,7 @@ namespace HealthMonitor.Models.HardDriveSpace
 			return (hardDriveSpace1.Any(s1 =>
 			{
 				var s2 = hardDriveSpace2.FirstOrDefault(t => t.name == s1.name);
-				return s2.Equals(s2) == false;
+				return s1.Equals(s2) == false;
 			}) || hardDriveSpace2.Any(s2 =>
 			{
 				var s1 = hardDriveSpace1.FirstOrDefault(t => t.name == s2.name);

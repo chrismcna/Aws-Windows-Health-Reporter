@@ -73,7 +73,7 @@ namespace HealthMonitor.Models.HardDriveSmart
 			return (hardDrive1.Any(s1 =>
 			{
 				var s2 = hardDrive2.FirstOrDefault(t => t.Key == s1.Key);
-				return s2.Value.Equals(s2.Value) == false;
+				return s1.Value.Equals(s2.Value) == false;
 			}) || hardDrive2.Any(s2 =>
 			{
 				var s1 = hardDrive1.FirstOrDefault(t => t.Key == s2.Key);
@@ -83,12 +83,18 @@ namespace HealthMonitor.Models.HardDriveSmart
 
 		public bool Equals(HDD hardDrive)
 		{
-			if (hardDrive == null) return false;
-			if (Index != hardDrive.Index) return false;
-			if (IsOK != hardDrive.IsOK) return false;
-			if (Model != hardDrive.Model) return false;
-			if (Type != hardDrive.Type) return false;
-			if (Serial != hardDrive.Serial) return false;
+			if (hardDrive == null)
+				return false;
+			if (Index != hardDrive.Index)
+				return false;
+			if (IsOK != hardDrive.IsOK)
+				return false;
+			if (Model != hardDrive.Model)
+				return false;
+			if (Type != hardDrive.Type)
+				return false;
+			if (Serial != hardDrive.Serial)
+				return false;
 
 
 

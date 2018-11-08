@@ -41,7 +41,7 @@ namespace HealthMonitor.Models.HardDriveSmart
 			return (smart1.Any(s1 =>
 			{
 				var s2 = smart2.FirstOrDefault(t => t.Key == s1.Key);
-				return s2.Value.Equals(s2.Value) == false;
+				return s1.Value.Equals(s2.Value) == false;
 			}) || smart2.Any(s2 =>
 			{
 				var s1 = smart1.FirstOrDefault(t => t.Key == s2.Key);
@@ -51,13 +51,20 @@ namespace HealthMonitor.Models.HardDriveSmart
 
 		public bool Equals(Smart smart)
 		{
-			if (smart == null) return false;
-			if (Attribute != smart.Attribute) return false;
-			if (Current != smart.Current) return false;
-			if (Worst != smart.Worst) return false;
-			if (Threshold != smart.Threshold) return false;
-			if (Data != smart.Data) return false;
-			if (IsOK != smart.IsOK) return false;
+			if (smart == null)
+				return false;
+			if (Attribute != smart.Attribute)
+				return false;
+			if (Current != smart.Current)
+				return false;
+			if (Worst != smart.Worst)
+				return false;
+			if (Threshold != smart.Threshold)
+				return false;
+			if (Data != smart.Data)
+				return false;
+			if (IsOK != smart.IsOK)
+				return false;
 
 			return true;
 		}
