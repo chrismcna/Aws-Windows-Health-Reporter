@@ -1,0 +1,5 @@
+﻿"C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil.exe" HealthMonitor.exe
+
+
+then edit App.config and update root directory parameter
+

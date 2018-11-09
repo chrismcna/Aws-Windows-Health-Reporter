@@ -15,20 +15,20 @@ namespace HealthMonitor
 		/// </summary>
 		static void Main()
 		{
-			Process process = new Process();
-			process.Start();
+			//Process process = new Process();
+			//process.Start();
 
-			while (true)
-			{
-				Thread.Sleep(2000);
-			}
-
-			//ServiceBase[] ServicesToRun;
-			//ServicesToRun = new ServiceBase[]
+			//while (true)
 			//{
-			//	new Service1()
-			//};
-			//ServiceBase.Run(ServicesToRun);
+			//	Thread.Sleep(2000);
+			//}
+
+			ServiceBase[] ServicesToRun;
+			ServicesToRun = new ServiceBase[]
+			{
+				new Service1()
+			};
+			ServiceBase.Run(ServicesToRun);
 		}
 	}
 }
